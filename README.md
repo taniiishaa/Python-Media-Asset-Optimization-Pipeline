@@ -1,9 +1,8 @@
-
 📸 Professional Batch Image Resizer Tool
-This project delivers a robust, highly efficient command-line utility for batch image processing. Leveraging Python 3.x and the Pillow (PIL) library, the tool automates the monotonous task of image resizing, ensuring consistent asset preparation for web, data analysis, or application deployment.
+This repository delivers a robust, highly efficient command-line utility for batch image processing. Leveraging Python 3.x and the Pillow (PIL) library, the tool automates the monotonous task of image resizing, ensuring consistent asset preparation for web, data analysis, or application deployment.
 
 🎯 Project Value Proposition
-The Batch Image Resizer Tool was developed to eliminate manual, per-file resizing, directly addressing the need for uniformity and efficiency in asset pipelines.
+This Batch Image Resizer Tool was developed to eliminate manual, per-file resizing, directly addressing the need for uniformity and efficiency in asset pipelines.
 
 Metric	Manual Process	Automated Tool
 Time per 100 Images	≈20 minutes	≈15 seconds
@@ -17,30 +16,10 @@ This script provides a drop-in solution to ensure all processed images adhere to
 This project demonstrates strong foundations in scripting, file system management, and third-party library utilization.
 
 Feature	Technical Implementation	Best Practice Demonstrated
-Aspect Ratio Preservation	Calculates the resize height using the original image's width-to-height ratio ( 
-W 
-new
-​
- 
-H 
-new
-​
- 
-​
- = 
-W 
-orig
-​
- 
-H 
-orig
-​
- 
-​
- ), ensuring zero distortion.	Demonstrates strong understanding of image geometry and data integrity.
-Robust File Handling	Utilizes the os module for dynamic path construction and directory existence checks (os.makedirs).	Defensive programming and proper I/O separation (input and output directories).
+Aspect Ratio Preservation	Calculates the resize height using the original image's width-to-height ratio, ensuring zero distortion.	Strong understanding of image geometry and data integrity.
+Robust File Handling	Utilizes the os module for dynamic path construction and directory existence checks (os.makedirs).	Defensive programming and proper I/O separation.
 Graceful Error Recovery	Implements try...except blocks to catch non-image files, corrupted data, or file permission issues without crashing the batch process.	Focus on reliability and high fault tolerance.
-Format Awareness	Uses img.save(output_path, img.format) to ensure the resized output is saved in its original file format (e.g., JPG remains JPG, PNG remains PNG).	Attention to detail in asset preservation.
+Format Awareness	Uses img.save(format=...) to ensure the resized output is saved in its original file format (e.g., JPG remains JPG, PNG remains PNG).	Attention to detail in asset preservation.
 
 Export to Sheets
 ⚙️ Getting Started
@@ -75,12 +54,4 @@ Run the script from the command line in the project's root directory:
 
 Bash
 
-python resize_script.py
-The terminal will provide real-time status updates on successful resizes and any skipped or failed files. The final resized images, prefixed with resized_, will be available in the output_images folder.
-
-💡 Future Enhancements
-Customizable Target: Implement command-line arguments (using argparse) for dynamically setting the target width and height without modifying the source code.
-
-Compression/Optimization: Add functionality to adjust JPEG quality or optimize PNGs during the saving process to minimize final file size.
-
-File Overwrite Check: Implement logic to ask the user before overwriting files in the output directory.
+python resize_script.pyiting files in the output directory.
