@@ -15,15 +15,6 @@ This project is a simple batch image resizer built with Python and the Pillow li
 - Install Pillow:
      pip install pillow
 
-📂 Project Structure
-
-Image-Resizer-Tool/
-│
-├── input_images/        # Folder containing original images
-├── output_images/       # Folder where resized images will be saved
-├── resize_images.py     # Main Python script
-└── README.md            # Project documentation
-
 🚀 How to Run
 - Clone or download this project.
 - Place the images you want to resize inside the input_images folder.
