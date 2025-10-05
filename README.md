@@ -41,3 +41,23 @@ The entire application is contained within `resize_images.py` and manages input/
 | `NEW_WIDTH` | Global constant defining the target output width. | Centralized configuration for easy pipeline adjustment. |
 | `Image.open()` | Handles reading image data. | Utilizes the powerful Pillow library for image processing. |
 | `batch_resize()` | Orchestrates the entire directory process. | Implements directory traversal and file type filtering
+| `if original_width <= new_width:` | Conditional check within the resize function. | The core of the performance-driven skip logic. |
+
+## 🚀 Quick Setup
+
+This application requires only Python 3.x and the Pillow library.
+
+1.  **Install Dependencies:**
+    ```bash
+    pip install Pillow
+    ```
+2.  **Prepare Assets:**
+    Create a folder named **`input_images`** and place your files inside.
+3.  **Execute the Optimizer:**
+    ```bash
+    python resize_images.py
+    ```
+
+## 🎯 Outcome
+
+This project successfully delivered a performance-focused asset processing utility. It validates my ability to implement **robust file handling, mathematical integrity checks, and modular architecture** in a Python environment, showcasing a commitment to producing clean, reliable, and production-ready code.
